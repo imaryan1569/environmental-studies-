@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namma Neeru – Bengaluru’s Lakes Portal</title>
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Namma Neeru – Bengaluru’s Lakes Portal</h1>
+    <p>Report • Track • Protect Bengaluru’s Water Bodies</p>
+  </header>
+
+  <main>
+    <section id="map-section">
+      <h2>Interactive Map</h2>
+      <div id="map"></div>
+    </section>
+
+    <section id="report">
+      <h2>Submit Pollution Report</h2>
+      <form id="report-form">
+        <label>
+          Name:
+          <input type="text" id="r-name" placeholder="Your name (optional)" />
+        </label>
+        <label>
+          Mobile Number:
+          <input type="tel" id="r-mobile" placeholder="Your phone (optional)" />
+        </label>
+        <label>
+          Lake/Location:
+          <input type="text" id="r-location" placeholder="e.g. Bellandur Lake" required />
+        </label>
+        <label>
+          Description:
+          <textarea id="r-desc" placeholder="Describe the issue (pollution, dumping, etc.)" required></textarea>
+        </label>
+        <label>
+          Upload Photo:
+          <input type="file" id="r-photo" accept="image/*" required />
+        </label>
+        <button type="submit">Submit Report</button>
+      </form>
+
+      <div id="report-result" class="notice" aria-live="polite"></div>
+      <p class="muted">
+        Note: This is a demo site. Reports are saved locally in your browser (no server).  
+        For official use, this system should connect with BBMP or KSPCB APIs.
+      </p>
+    </section>
+
+    <section id="cleaned">
+      <h2>Cleaned Places</h2>
+      <div id="cleaned-gallery" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Project: Namma Neeru — Bengaluru’s Lakes Portal | EVS Project Demo</p>
+    <p>Designed by Aryan S | Jain (Deemed-to-be University)</p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
